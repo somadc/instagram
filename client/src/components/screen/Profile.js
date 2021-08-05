@@ -21,7 +21,8 @@ const Profile = () => {
         {/* {console.log(state)} */}
             <div style={{ display: 'flex', justifyContent: 'space-between', margin: '14px 40px', padding: '5px', borderBottom: "1px solid gray" }}>
                 <div style={{ margin: "10px auto" }}>
-                    <img style={{ width: '300px', height: '260px', borderRadius: '50%' }} src="./././img/profile_pic.jpg" />
+                    {/* <img style={{ width: '300px', height: '260px', borderRadius: '50%' }} src="./././img/profile_pic.jpg" /> */}
+                    <img style={{ borderRadius: '50%' }} src={state?state.pic:"loading"} />
                 </div>
 
                 <div style={{ margin: "40px auto", display: "flex", justifyContent: "space-between" }}>
