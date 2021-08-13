@@ -34,12 +34,16 @@ a{
   /* padding: 5px; */
 
 }
+
 .home-card{
   max-width: 500px;
   height: max-content;
   margin: 20px auto;
 }
 
+.collection-item{
+  width: 100%;
+}
 #toast-container{
   top: 30px !important;
   right: 20px !important;

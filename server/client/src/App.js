@@ -9,7 +9,9 @@ import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom'
 import CreatePost from './components/screen/CreatePost';
 import UserProfile from './components/screen/UserProfile';
 import SubscribedUserPost from './components/screen/SubscribedUserPost.js';
-import {reducer, initialState} from './reducer/userReducer'
+import {reducer, initialState} from './reducer/userReducer';
+import Reset from './components/screen/Reset';
+import NewPassword from './components/screen/NewPassword';
 // import { createContext } from 'react/cjs/react.development';
 
 export const UserContext = createContext()
@@ -25,7 +27,7 @@ const Routing = () => {
       // history.push('/')
     }
     else{
-     
+     if (!history.location.pathname.startsWith('/reset'))
       history.push('/login')
     }
   },[])
@@ -51,6 +53,12 @@ const Routing = () => {
         </Route>
       <Route exact path="/myfollowingpost">
         <SubscribedUserPost />
+      </Route>
+      <Route exact path="/reset">
+        <Reset />
+      </Route>
+      <Route  path="/reset/:token">
+        <NewPassword />
       </Route>
     </Switch>
   )
